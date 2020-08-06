@@ -1,0 +1,38 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Controller\\": "src/Controller",
+      "Core\\": "src/Core",
+      "Model\\": "src/Model",
+      "View\\": "src/View"
+    }
+  },
+  "require": {
+    "texlab/mydb": "^0.0.4",
+    "texlab/html": "^0.08.0",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "scripts": {
+    "ci:test": [
+      "@test",
+      "@codestyle"
+    ],
+    "idb": "php install/install.php",
+    "rs": "php -S localhost:8000 -t public/",
+    "psalm": "psalm",
+    "phpstan": "phpstan analyse -c phpstan.neon",
+    "codestyle": "phpcs",
+    "codestylefix": "phpcbf",
+    "test": "phpunit --testsuite alltests",
+    "psalter": [
+      "psalter --issues=MissingReturnType",
+      "psalter --issues=InvalidReturnType"
+    ]
+  },
+  "require-dev": {
+    "vimeo/psalm": "^3.12",
+    "phpstan/phpstan": "^0.12.33",
+    "phpunit/phpunit": "^9.2"
+  }
+}
+
