@@ -15,7 +15,7 @@
   "scripts": {
     "ci:test": [
       "@test",
-      "@codestyle"
+      "@codestylefix"
     ],
     "idb": "php install/install.php",
     "rs": "php -S localhost:8000 -t public/",
