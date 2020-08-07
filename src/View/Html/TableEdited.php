@@ -14,7 +14,8 @@ class TableEdited extends Table
     /**
      * @return self
      */
-    public function setHeaders(array $headers) {
+    public function setHeaders(array $headers)
+    {
         parent::setHeaders($headers);
         $this->headers .= "\t<th></th>\n\t<th></th>\n";
         return $this;

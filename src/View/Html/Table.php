@@ -24,7 +24,8 @@ class Table extends AbstractTag
     /**
      * @return self
      */
-    public function setHeaders(array $headers) {
+    public function setHeaders(array $headers)
+    {
         $str = '';
 
         foreach ($headers as $value) {
@@ -55,6 +56,7 @@ class Table extends AbstractTag
 
     public function html(): string
     {
-        return "<table class='table table-striped table-dark'  $this->style$this->class>\n<tr>\n$this->headers</tr>\n$this->data</table>\n";
+        return "<table class='table table-striped table-dark'  $this->style$this->class>\n<tr>\n.
+        $this->headers</tr>\n$this->data</table>\n";
     }
 }
