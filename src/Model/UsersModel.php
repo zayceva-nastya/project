@@ -12,7 +12,12 @@ class UsersModel extends DbEntity
         parent::__construct($tableName, $mysqli);
     }
 
-    public function getUsersPage(int $page)
+    /**
+     * @return string[][]
+     *
+     * @psalm-return array<array-key, array<array-key, string>>
+     */
+    public function getUsersPage(int $page): array
     {
         return $this
             ->reset()

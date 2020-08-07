@@ -1,14 +1,7 @@
 language: php
 
 php:
-  - "7.3"
   - "7.4"
-  - nightly
-  
-jobs:
-  allow_failures:
-    - php: "7.3"
-    - php: nightly
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-progress --no-suggest

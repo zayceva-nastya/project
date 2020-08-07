@@ -6,7 +6,12 @@ use TexLab\MyDB\DbEntity;
 
 class AuthModel extends DbEntity
 {
-    public function checkUser(string $login, string $password)
+    /**
+     * @return string[]
+     *
+     * @psalm-return array<array-key, string>
+     */
+    public function checkUser(string $login, string $password): array
     {
         return $this
             ->reset()
