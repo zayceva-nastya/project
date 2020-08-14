@@ -26,9 +26,6 @@ class UsersController extends AbstractTableController
         );
     }
 
-    /**
-     * @return void
-     */
     public function actionShow(array $data)
     {
         parent::actionShow($data);
@@ -44,9 +41,6 @@ class UsersController extends AbstractTableController
                     ->getUsersPage($data['get']['page'] ?? 1)
             ]);
     }
-    /**
-     * @return void
-     */
     public function actionShowEdit(array $data)
     {
         parent::actionShowEdit($data);
@@ -58,17 +52,11 @@ class UsersController extends AbstractTableController
             ]);
         ;
     }
-    /**
-     * @return void
-     */
     public function actionAdd(array $data)
     {
         $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
         parent::actionAdd($data);
     }
-    /**
-     * @return void
-     */
     public function actionEdit(array $data)
     {
         $data['post']['password'] = md5($data['post']['password'] . Config::SALT);

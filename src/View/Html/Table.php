@@ -21,9 +21,6 @@ class Table extends AbstractTag
         return $this;
     }
 
-    /**
-     * @return self
-     */
     public function setHeaders(array $headers)
     {
         $str = '';
@@ -35,9 +32,6 @@ class Table extends AbstractTag
         return $this;
     }
 
-    /**
-     * @return self
-     */
     public function data(array $data)
     {
         $str = "";
@@ -54,9 +48,15 @@ class Table extends AbstractTag
         return $this;
     }
 
-    public function html(): string
+    public function html()
     {
-        return "<table class='table table-striped table-dark'  $this->style$this->class>\n<tr>\n.
-        $this->headers</tr>\n$this->data</table>\n";
+        return "<table class='table table-striped table-dark'  
+            " . $this->style .
+            $this->class .
+            ">\n<tr>\n" .
+            $this->headers .
+            "</tr>\n" .
+            $this->data .
+            "</table>\n";
     }
 }

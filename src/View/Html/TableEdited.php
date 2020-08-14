@@ -6,14 +6,11 @@ class TableEdited extends Table
 {
     protected $type;
 
-    public function setControllerType(string $type): self
+    public function setControllerType(string $type)
     {
         $this->type = $type;
         return $this;
     }
-    /**
-     * @return self
-     */
     public function setHeaders(array $headers)
     {
         parent::setHeaders($headers);
@@ -21,9 +18,6 @@ class TableEdited extends Table
         return $this;
     }
 
-    /**
-     * @return self
-     */
     public function data(array $data)
     {
         $str = "";

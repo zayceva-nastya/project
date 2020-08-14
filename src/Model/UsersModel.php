@@ -12,12 +12,7 @@ class UsersModel extends DbEntity
         parent::__construct($tableName, $mysqli);
     }
 
-    /**
-     * @return string[][]
-     *
-     * @psalm-return array<array-key, array<array-key, string>>
-     */
-    public function getUsersPage(int $page): array
+    public function getUsersPage(int $page)
     {
         return $this
             ->reset()
@@ -28,7 +23,7 @@ class UsersModel extends DbEntity
             ->getPage($page);
     }
 
-    public function getGroupNames(): array
+    public function getGroupNames()
     {
         $data = $this->runSQL('SELECT `id`,`name` FROM `group`');
         $result = [];
@@ -36,5 +31,10 @@ class UsersModel extends DbEntity
             $result[$row['id']] = $row['name'];
         }
         return $result;
+    }
+
+    public function getGroupIdByCode($cod)
+    {
+        return $this->runSQL("SELECT `id` FROM `group` where `cod` = '$cod'")[0]['id'];
     }
 }

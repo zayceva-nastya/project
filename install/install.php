@@ -20,14 +20,11 @@ $runner = new Runner(
         'host' => Config::MYSQL_HOST,
         'username' => Config::MYSQL_USER_NAME,
         'password' => Config::MYSQL_PASSWORD
-    ]));
-
-foreach (explode(";", file_get_contents('install/guests_book.sql')) as $value) {
-    try {
-        if (!empty($value)) {
-            $runner->runSQL($value);
-        }
-    } catch (Exception $e) {
-        echo $e->getMessage();
+    ])
+);
+$runner->setErrorHandler(
+    function ($mysqli, $sql) {
+        echo $mysqli->error;
     }
-}
+);
+$runner->runScript(file_get_contents('install/guests_book.sql'));

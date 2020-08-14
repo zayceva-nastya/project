@@ -8,7 +8,7 @@ class Input extends AbstractTag
     protected $type = " type='text'";
     protected $name;
 
-    public function setType(string $type): self
+    public function setType(string $type)
     {
         if (
             in_array($type, [
@@ -27,19 +27,19 @@ class Input extends AbstractTag
         return $this;
     }
 
-    public function setValue(string $value): self
+    public function setValue(string $value)
     {
         $this->value = " value='$value'";
         return $this;
     }
 
-    public function setName(string $name): self
+    public function setName(string $name)
     {
         $this->name = " name='$name'";
         return $this;
     }
 
-    public function html(): string
+    public function html()
     {
         return "<input$this->type$this->value$this->name$this->style$this->class$this->id>\n";
     }

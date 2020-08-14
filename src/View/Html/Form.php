@@ -8,26 +8,26 @@ class Form extends AbstractTag
     protected $method = "GET";
     protected $content = "";
 
-    public function setAction(string $action): self
+    public function setAction(string $action)
     {
         $this->action = $action;
         return $this;
     }
 
 
-    public function setContent(string $content): self
+    public function setContent(string $content)
     {
         $this->content = $content;
         return $this;
     }
 
-    public function addContent(string $content): self
+    public function addContent(string $content)
     {
         $this->content .= $content;
         return $this;
     }
 
-    public function setMethod($method): self
+    public function setMethod($method)
     {
         if (in_array($method, ["POST", "GET"])) {
             $this->method = $method;
@@ -36,7 +36,7 @@ class Form extends AbstractTag
     }
 
 
-    public function html(): string
+    public function html()
     {
         return "<form action='$this->action' method='$this->method'$this->class$this->style>\n$this->content</form>";
     }

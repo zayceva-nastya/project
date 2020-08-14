@@ -33,9 +33,6 @@ abstract class AbstractTableController extends AbstractController implements CRU
         $this->view->setFolder('table');
     }
 
-    /**
-     * @return void
-     */
     public function actionShow(array $data)
     {
         //        $currentPage = $data['get']['page'] ?? 1;
@@ -81,9 +78,6 @@ abstract class AbstractTableController extends AbstractController implements CRU
         //        print_r($this->table->getPageCount());
     }
 
-    /**
-     * @return void
-     */
     public function actionAdd(array $data)
     {
         // print_r($data);
@@ -96,9 +90,6 @@ abstract class AbstractTableController extends AbstractController implements CRU
         // }
     }
 
-    /**
-     * @return void
-     */
     public function actionDel(array $data)
     {
 
@@ -109,9 +100,6 @@ abstract class AbstractTableController extends AbstractController implements CRU
         $this->redirect('?action=show&type=' . $this->getClassName());
     }
 
-    /**
-     * @return void
-     */
     public function actionShowEdit(array $data)
     {
         // print_r($data['get']['id']);
@@ -135,9 +123,6 @@ abstract class AbstractTableController extends AbstractController implements CRU
         // print_r($viewData);
     }
 
-    /**
-     * @return void
-     */
     public function actionEdit(array $data)
     {
         // print_r($data);
