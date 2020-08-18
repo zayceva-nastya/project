@@ -40,7 +40,7 @@ foreach ($fields as $field) {
         $form->addContent('<br>');
     }
 }
-
+$form->addContent((new \TexLab\Html\Select())->setName($field)->setId($field)->setData([1=>'women',2=>'men'])->html());
 $form->addContent(
     Html::create('Input')
         ->setType('submit')

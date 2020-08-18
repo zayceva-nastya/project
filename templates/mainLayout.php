@@ -23,6 +23,7 @@
             break;
         default:
             include "defaultMenu.php";
+            // include "adminMenu.php";
             break;
     }
 

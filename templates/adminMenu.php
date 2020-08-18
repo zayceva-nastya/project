@@ -10,11 +10,11 @@
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item<?= $controllerType == 'guestbook' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=guestbook">Guestbook</a>
+            <li class="nav-item<?= $controllerType == 'trainingdiary' ? ' active' : '' ?>">
+                <a class="nav-link" href="?action=show&type=trainingdiary">Дневник тренировок</a>
             </li>
-            <li class="nav-item<?= $controllerType == 'phonebook' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=phonebook">Phonebook</a>
+            <li class="nav-item<?= $controllerType == 'workouts' ? ' active' : '' ?>">
+                <a class="nav-link" href="?action=show&type=workouts">План тренировок</a>
             </li>
             <li class="nav-item<?= $controllerType == 'group' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=group">Group</a>
