@@ -27,4 +27,4 @@ $runner->setErrorHandler(
         echo $mysqli->error;
     }
 );
-$runner->runScript(file_get_contents('install/guests_book.sql'));
+$runner->runScript(file_get_contents('install/_fitness.sql'));

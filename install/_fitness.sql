@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 18 2020 г., 14:23
--- Версия сервера: 10.3.22-MariaDB-log
--- Версия PHP: 7.4.4
+-- Время создания: Авг 18 2020 г., 18:45
+-- Версия сервера: 10.3.22-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: ` fitness`
+-- База данных: `project`
 --
-CREATE DATABASE IF NOT EXISTS ` fitness` DEFAULT CHARACTER SET utf16 COLLATE utf16_bin;
-USE ` fitness`;
+CREATE DATABASE IF NOT EXISTS `project` DEFAULT CHARACTER SET utf16 COLLATE utf16_bin;
+USE `project`;
 
 -- --------------------------------------------------------
 

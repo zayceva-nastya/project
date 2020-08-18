@@ -1,11 +1,14 @@
 <?php
 
+use TexLab\Html\Select;
 use View\Html\Html;
 
 /** @var int $pageCount Количество страниц
  * @var array $fields Список полей таблицы
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
+ * @var array $groupNames
+ * @var array $table
  */
 // print_r($groupNames);
 
@@ -15,6 +18,7 @@ echo Html::create("Pagination")
     ->setControllerType($type)
     ->setPageCount($pageCount)
     ->html();
+//print_r($table);
 
 echo Html::create('TableEdited')
     ->setControllerType($type)
@@ -32,15 +36,24 @@ $form = Html::create('Form')
 foreach ($fields as $field) {
     $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
 
-    if ($field != 'group_id') {
-        $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
+    if ($field == 'group_id') {
+        $form->addContent('<br>');
+        $form->addContent((new Select())->setName($field)->setId($field)->setData($groupNames)->html());
+        $form->addContent('<br>');
+    } elseif ($field == 'Gender') {
+        $form->addContent((new Select())
+            ->setName($field)
+            ->setId($field)
+            ->setData([
+                'women' => 'Ж',
+                'men' => 'М'
+            ])
+            ->html());
     } else {
-        $form->addContent('<br>');
-        $form->addContent((new \TexLab\Html\Select())->setName($field)->setId($field)->setData($groupNames)->html());
-        $form->addContent('<br>');
+        $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
     }
 }
-$form->addContent((new \TexLab\Html\Select())->setName($field)->setId($field)->setData([1=>'women',2=>'men'])->html());
+
 $form->addContent(
     Html::create('Input')
         ->setType('submit')

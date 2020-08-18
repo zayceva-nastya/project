@@ -28,6 +28,7 @@
             <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=logout&type=auth">Logout</a>
             </li>
+
             <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>
                 </span>
