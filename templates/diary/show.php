@@ -41,7 +41,7 @@ echo Html::create('Table')
 //
 //echo $form->html();
 ?>
-<!-- <form action="?action=add&type=<?=$type?>" method="post" class="guestbookform">
+<form action="?action=add&type=<?=$type?>" method="post" class="guestbookform">
     <label> <?= $comments['text'] ?>
         <textarea name="text" cols="50" rows="10"></textarea>
     </label>
@@ -55,4 +55,4 @@ echo Html::create('Table')
         <input type="text" name="name">
     </label>
     <input type="submit" value="Отправить">
-</form> -->
+</form>

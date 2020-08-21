@@ -41,18 +41,3 @@ echo Html::create('Table')
 //
 //echo $form->html();
 ?>
-<!-- <form action="?action=add&type=<?=$type?>" method="post" class="guestbookform">
-    <label> <?= $comments['text'] ?>
-        <textarea name="text" cols="50" rows="10"></textarea>
-    </label>
-    <label> <?= $comments['phonenumber'] ?>
-        <input type="tel" name="phonenumber">
-    </label>
-    <label> <?= $comments['email'] ?>
-        <input type="email" name="email">
-    </label>
-    <label> <?= $comments ['name'] ?>
-        <input type="text" name="name">
-    </label>
-    <input type="submit" value="Отправить">
-</form> -->

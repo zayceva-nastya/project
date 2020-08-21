@@ -10,8 +10,8 @@
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item<?= $controllerType == 'trainingdiary' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=trainingdiary">Дневник тренировок</a>
+            <li class="nav-item<?= $controllerType == 'diary' ? ' active' : '' ?>">
+                <a class="nav-link" href="?action=show&type=diary">Дневник тренировок</a>
             </li>
             <li class="nav-item<?= $controllerType == 'workouts' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=workouts">План тренировок</a>

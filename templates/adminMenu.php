@@ -10,8 +10,8 @@
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item<?= $controllerType == 'trainingdiary' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=trainingdiary">Дневник тренировок</a>
+            <li class="nav-item<?= $controllerType == 'diary' ? ' active' : '' ?>">
+                <a class="nav-link" href="?action=show&type=diary">Дневник тренировок</a>
             </li>
             <li class="nav-item<?= $controllerType == 'workouts' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=workouts">План тренировок</a>
@@ -22,11 +22,11 @@
             <li class="nav-item<?= $controllerType == 'users' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=users">Users</a>
             </li>
-            <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
+            <!-- <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=loginform&type=auth">Login</a>
-            </li>
+            </li> -->
             <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=logout&type=auth">Logout</a>
+                <a class="nav-link" href="?action=logout&type=auth">Выйти</a>
             </li>
 
             <span class="navbar-text">
