@@ -102,7 +102,7 @@ CREATE TABLE `workouts` (
   `user_id` int(11) NOT NULL COMMENT '№',
   `exercise` varchar(500) COLLATE utf16_bin NOT NULL COMMENT 'Упражнение',
   ` number of repetitions` varchar(100) COLLATE utf16_bin NOT NULL COMMENT 'Количество повторений',
-  ` lead time` varchar(100) COLLATE utf16_bin NOT NULL COMMENT 'Время выполнения'
+  ` lead time` varchar(100) COLLATE utf16_bin NOT NULL COMMENT 'Время выполнения'Количество повторений
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 --
