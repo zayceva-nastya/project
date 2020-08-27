@@ -37,4 +37,14 @@ class UsersModel extends DbEntity
     {
         return $this->runSQL("SELECT `id` FROM `group` where `cod` = '$cod'")[0]['id'];
     }
+    
+    public function getUsers()
+    {
+        $data = $this->runSQL('SELECT `id`,`login` FROM `users`');
+        $result = [];
+        foreach ($data as $row) {
+            $result[$row['id']] = $row['login'];
+        }
+        return $result;
+    }
 }

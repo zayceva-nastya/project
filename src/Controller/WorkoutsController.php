@@ -20,7 +20,7 @@ class WorkoutsController extends AbstractTableController
 
         $this
             ->view
-            // ->setFolder('workouts')
+            ->setFolder('workouts')
             ->setTemplate('show')
             ->setData([
                 'table' => $this

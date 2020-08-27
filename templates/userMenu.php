@@ -17,9 +17,6 @@
                 <a class="nav-link" href="?action=show&type=workouts">План тренировок</a>
             </li>
             <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=loginform&type=auth">Login</a>
-            </li>
-            <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=logout&type=auth">Logout</a>
             </li>
             <span class="navbar-text">

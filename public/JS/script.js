@@ -1,6 +1,14 @@
-document.getElementById("addButton").onclick = function () {
+let fun = function () {
+
+    let addButton = document.getElementById("addButton");
+    addButton.innerText = addButton.innerText === "Убрать" ? "Добавить заявку" : "Убрать"
+
     document.getElementById("addForm").classList.toggle("hidden")
-    this.innerText="clear"
+    document.getElementById("shadow").classList.toggle("hidden")
 }
 
-document.getElementById("addForm").onclick
+document.getElementById("addButton").onclick = fun
+
+document.getElementById("closeFormButton").onclick = fun
+
+document.getElementById("shadow").onclick = fun
