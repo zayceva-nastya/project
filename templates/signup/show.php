@@ -1,8 +1,8 @@
 <?php
 
 ?>
-<form action="?type=signup&action=add" method="post">
-    <label> Логин <input type="text" name="login"></label>
+<form action="?type=signup&action=add" method="post" id="loginform">
+    <label> Логин <input type="text" name="login" id="login"></label>
     <label> Пароль <input type="text" name="password"></label>
     <lablel>ФИО <input type="text" name="FIO"></label>
         <label>Вес <input type="text" name="weight"></label>
@@ -13,3 +13,26 @@
             </select></label>
         <input type="submit" value="ok">
 </form>
+<div id="response"></div>
+<script>document.getElementById('login').addEventListener("keyup", function () {
+        alert(this.value)
+        let xhr = new XMLHttpRequest();
+// let  loginform=document.getElementById('loginform');
+        xhr.open("post", "?type=signup&action=checklogin&login="+this.value);
+        xhr.send();
+
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                let obj = JSON.parse(xhr.response);
+                document.getElementById('response').innerHTML = obj.response;
+                let input = document.getElementById('login');
+                if(obj.response=="Yes"){
+                    input.classList.add('loginalert')
+                }else{
+                    input.classList.remove('loginalert')
+                }
+            } else {
+                console.log(xhr.statusText)
+            }
+        };
+    })</script>

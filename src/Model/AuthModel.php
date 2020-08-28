@@ -17,4 +17,15 @@ class AuthModel extends DbEntity
             ->addWhere("BINARY `users`.`password`= '$password'")
             ->get()[0];
     }
+
+    public function loginExists(string $login)
+    {
+        return (int) $this
+            ->reset()
+            ->setSelect('count(*) AS `C`')
+            ->setFrom('`users`,`group`')
+            ->setWhere('`users`.`group_id` = `group`.`id`')
+            ->addWhere("BINARY `users`.`login`= '$login'")
+            ->get()[0]['C'];
+    }
 }
