@@ -11,7 +11,7 @@ use TexLab\MyDB\DB;
 use TexLab\MyDB\DbEntity;
 use View\View;
 
-class LandlordApplicationController extends DiaryController
+class DiaryIdController extends DiaryController
 
 {
     public function actionShow(array $data)

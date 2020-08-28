@@ -47,7 +47,7 @@ class DiaryController extends AbstractTableController
             ->setFolder('diary');
 
 
-//        $this->usersTable->getUsers();
+        //        $this->usersTable->getUsers();
 
         $this->view->addData(
             [
@@ -59,34 +59,6 @@ class DiaryController extends AbstractTableController
                     ->getApplicationPage($data['get']['page'] ?? 1)
             ]
         );
-        
-//        print_r($this->usersTable->getUsers());
-        // switch ($_SESSION['user']['cod']) {
-        //     case 'admin':
-        //         $this
-        //             ->view
-        //             ->setFolder('application')
-        //             ->setTemplate('showadmin')
-        //             ->setData([
-        //                 'table' => $this->table->get(),
-        //                 'fields' => array_diff($this->table->getColumnsNames(), ['id']),
-        //                 'comments' => $this->table->getColumnsComments(),
-        //                 'type' => $this->getClassName()
-        //             ]);
-        //         break;
-        //     case 'user':
-        //         $this
-        //             ->view
-        //             ->setFolder('application')
-        //             ->setTemplate('showuser')
-        //             ->setData([
-        //                 'table' => $this->table->get(),
-        //                 'fields' => array_diff($this->table->getColumnsNames(), ['id']),
-        //                 'comments' => $this->table->getColumnsComments(),
-        //                 'type' => $this->getClassName()
-        //             ]);
-        //         break;
-        // }
     }
 
     public function actionShowEdit(array $data)
@@ -104,4 +76,3 @@ class DiaryController extends AbstractTableController
         );
     }
 }
-
