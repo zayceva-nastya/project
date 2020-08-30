@@ -14,25 +14,53 @@
         <input type="submit" value="ok">
 </form>
 <div id="response"></div>
-<script>document.getElementById('login').addEventListener("keyup", function () {
-        alert(this.value)
-        let xhr = new XMLHttpRequest();
-// let  loginform=document.getElementById('loginform');
-        xhr.open("post", "?type=signup&action=checklogin&login="+this.value);
-        xhr.send();
 
-        xhr.onload = function () {
+<!-- <script>
+    document.getElementById('login').addEventListener("keyup", function() {
+        alert(this.value);
+        // let loginForm = document.getElementById("loginform");
+     let xhr = new XMLHttpRequest();
+        xhr.open("post", "?type=reg&action=checklogin&login=" + this.value);
+        xhr.send();
+        xhr.onload = function() {
             if (xhr.status == 200) {
-                let obj = JSON.parse(xhr.response);
+                // console.log(xhr.response)
+                var obj = JSON.parse(xhr.response);
                 document.getElementById('response').innerHTML = obj.response;
                 let input = document.getElementById('login');
-                if(obj.response=="Yes"){
-                    input.classList.add('loginalert')
-                }else{
-                    input.classList.remove('loginalert')
+                if (obj.response == "Yes") {
+                    input.classList.add("logAlert")
+                } else {
+                    input.classList.remove("logAlert")
                 }
             } else {
                 console.log(xhr.statusText)
             }
         };
-    })</script>
+    }) -->
+<!-- </script> -->
+<div id="response"></div>
+<script>
+    document.getElementById('login').addEventListener("keyup", function() {
+        // alert(this.value)
+        let xhr = new XMLHttpRequest();
+        // let  loginform=document.getElementById('loginform');
+        xhr.open("post", "?type=signup&action=checklogin&login=" + this.value);
+        xhr.send();
+
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                let obj = JSON.parse(xhr.response);
+                document.getElementById('response').innerHTML = obj.response;
+                let input = document.getElementById('login');
+                if (obj.response == "Yes") {
+                    input.classList.add('logAlert')
+                } else {
+                    input.classList.remove('logAlert')
+                }
+            } else {
+                console.log(xhr.statusText)
+            }
+        };
+    })
+</script>

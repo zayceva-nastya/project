@@ -10,14 +10,6 @@ class WorkoutsController extends AbstractTableController
     protected $tableName = "workouts";
     public function actionShow(array $data)
     {
-        //        $currentPage = $data['get']['page'] ?? 1;
-        //        print_r($data);
-        // print_r($this->table->getComments());
-        // $fields = $this->table->getFields();
-        // unset($fields['id']);
-        // echo $this->getClassName();
-        //        $fields = array_diff($this->table->getFields(), ['id']);
-
         $this
             ->view
             ->setFolder('workouts')
