@@ -31,6 +31,9 @@ $form = Html::create('Form')
 
 foreach ($fields as $field) {
     $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
+   if($field == 'user_id'){
+    $form->addContent(Html::create('input')->settype('hidden')->setName($field)->setId($field)->html());
+   }
     $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
 }
 
