@@ -10,7 +10,7 @@
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item<?= $controllerType == 'diary' ? ' active' : '' ?>">
+            <li class="nav-item<?= $controllerType == 'Diary' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=diary">Дневник тренировок</a>
             </li>
             <li class="nav-item<?= $controllerType == 'workouts' ? ' active' : '' ?>">

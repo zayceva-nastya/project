@@ -11,7 +11,7 @@ class Input extends AbstractTag
     public function setType(string $type)
     {
         if (
-            in_array($type, [
+        in_array($type, [
             'text',
             'button',
             'submit',
@@ -19,8 +19,9 @@ class Input extends AbstractTag
             'password',
             'file',
             'checkbox',
-            'hidden'
-            ])
+            'hidden',
+            'datetime-local'
+        ])
         ) {
             $this->type = " type='$type'";
         }

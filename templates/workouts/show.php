@@ -7,6 +7,9 @@ use View\Html\Html;
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
  */
+//print_r($table);
+
+
 
 echo Html::create("Pagination")
     ->setClass('pagination')
@@ -14,11 +17,19 @@ echo Html::create("Pagination")
     ->setPageCount($pageCount)
     ->html();
 
+foreach ($table as &$row) {
+//    $row['gifs'] = $row['id'];
+    $ext = pathinfo($row['gifs'], PATHINFO_EXTENSION);
+    $row['gifs'] = "<img src='public/gifs/$row[gifs]' class='img'>";
+}
 echo Html::create('Table')
     ->setHeaders($comments)
     ->data($table)
     ->setClass('table')
     ->html();
+
+
+
 
 
 //$form = Html::create('Form')

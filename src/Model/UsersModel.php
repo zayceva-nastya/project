@@ -16,7 +16,7 @@ class UsersModel extends DbEntity
     {
         return $this
             ->reset()
-            ->setSelect('`users`.`id`, `users`.`login`, `users`.`password`,  `group`.`name`, `users`.`FIO`,`users`.`weight`,`users`.`growth`,`users`.`gender` AS group_id')
+            ->setSelect('`users`.`id`, `users`.`login`, `users`.`password`,  `group`.`name`, `users`.`FIO`')
             ->setFrom('`users`,`group`')
             ->setWhere('`users`.`group_id` = `group`.`id`')
             ->setOrderBy('`users`.`id`')
